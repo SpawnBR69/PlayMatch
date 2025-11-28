@@ -8,7 +8,7 @@ import { Jogador } from '../../models/type'; // Certifique-se de adicionar email
 })
 export class AuthService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/api/players';
+  private apiUrl = 'https://backend-playmatch-n9yw.onrender.com/api/players';
 
   // Signal que guarda o usuário logado. 
   // Se for null, ninguém está logado.

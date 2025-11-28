@@ -8,7 +8,7 @@ import { Grupo } from '../../models/type'; // Certifique-se que a interface Grup
 })
 export class GroupService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/api/groups';
+  private apiUrl = 'https://backend-playmatch-n9yw.onrender.com/groups';
 
   getGrupos(
     status: 'upcoming' | 'past' | 'all' = 'upcoming',

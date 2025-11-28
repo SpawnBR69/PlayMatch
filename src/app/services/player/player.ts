@@ -10,7 +10,7 @@ export class PlayerService {
   private http = inject(HttpClient);
   
   // URL Base da API (sem /players)
-  private readonly baseUrl = 'http://localhost:3000/api';
+  private readonly baseUrl = 'https://backend-playmatch-n9yw.onrender.com/api';
 
   // --- ROTAS DE JOGADORES ---
   getJogadores(): Observable<Jogador[]> {

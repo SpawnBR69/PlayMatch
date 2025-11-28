@@ -9,7 +9,7 @@ import { PlayerService } from '../player/player';
 })
 export class ChatService {
   private http = inject(HttpClient);
-  private apiUrl = 'http://localhost:3000/api/chat';
+  private apiUrl = 'https://backend-playmatch-n9yw.onrender.com/api/chat';
 
   isSidebarOpen = signal(false);
   activeChatUser = signal<Jogador | null>(null);
