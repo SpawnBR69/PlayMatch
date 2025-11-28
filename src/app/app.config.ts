@@ -1,11 +1,10 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
-import { provideRouter } from '@angular/router';
-
-import { routes } from './app.routes';
+import { ApplicationConfig } from '@angular/core';
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
-    provideRouter(routes)
+    // Habilita o cliente HTTP (essencial para conversar com o NestJS)
+    // withFetch é uma otimização moderna para navegadores
+    provideHttpClient(withFetch())
   ]
 };
