@@ -201,7 +201,11 @@ export class ProfileComponent {
 
   fazerCadastro() {
     this.auth.register(this.registerData).subscribe({
-      next: () => this.errorMessage.set(''),
+      next: (user) => {
+        this.errorMessage.set('');
+        // Ativa o modo de edição imediatamente
+        this.toggleEditMode(user);
+      },
       error: (err) => this.errorMessage.set('Erro ao criar conta.')
     });
   }
